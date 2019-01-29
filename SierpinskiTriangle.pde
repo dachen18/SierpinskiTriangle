@@ -19,8 +19,9 @@ void draw()
   //float leng = sqrt((mouseX*mouseX)+(mouseY*mouseY));
   background(238,203,173);
   fill((int)((Math.random())*255),(int)((Math.random())*255),(int)((Math.random())*255));
-  //sierpinski(mouseX-(leng/2),mouseY+(leng/2),leng);
   sierpinski(500-(leng/2),500+(leng/2),leng);
+  sierpinski(0+(leng/2),1000-(leng/2),leng);
+  sierpinski(1000-(leng*1.5),0+(leng*1.5),leng);
 }
 void sierpinski(float x,float y,float len)
 {
