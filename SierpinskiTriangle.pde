@@ -15,7 +15,7 @@ void draw()
   else if (leng >= 1000)
   {
     leng = 50;
-  }
+  }fill((int)((Math.random())*255),(int)((Math.random())*255),(int)((Math.random())*255));
   //float leng = sqrt((mouseX*mouseX)+(mouseY*mouseY));
   background(238,203,173);
   fill((int)((Math.random())*255),(int)((Math.random())*255),(int)((Math.random())*255));
