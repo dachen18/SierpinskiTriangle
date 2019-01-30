@@ -3,29 +3,33 @@ float leng = 50;
 boolean StopLoop = true;
 void setup()
 {
-  frameRate(60);
+  frameRate(240);
   size(1001,1001);
 }
 void draw()
 {
   if (leng <= 1000 && StopLoop == false)
   {
-    leng = leng + 5;
+    leng = leng + 2.5;
   }
   else if (leng >= 1000)
   {
     leng = 50;
-  }fill((int)((Math.random())*255),(int)((Math.random())*255),(int)((Math.random())*255));
-  //float leng = sqrt((mouseX*mouseX)+(mouseY*mouseY));
+  }
+  //
   background(238,203,173);
+  //
   fill((int)((Math.random())*255),(int)((Math.random())*255),(int)((Math.random())*255));
   sierpinski(500-(leng/2),500+(leng/2),leng);
   sierpinski(0+(leng/2),1000-(leng/2),leng);
   sierpinski(1000-(leng*1.5),0+(leng*1.5),leng);
+  sierpinski(0+(leng/2),0+(leng*1.5),leng);
+  sierpinski(1000-(leng*1.5),1000-(leng/2),leng);
+
 }
 void sierpinski(float x,float y,float len)
 {
-  if (len <= 10)
+  if (len <= 30)
   {
     triangle(x,y,x+len,y,x+len/2,y-len);
   }
